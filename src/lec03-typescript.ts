@@ -61,18 +61,16 @@
 // type X = Partial<{thomas: string}>
 // const x: X = {}
 
-
 function log(name: string): true;
-function log(id: number): 'looked up a thing'
+function log(id: number): 'looked up a thing';
 
 function log(name: string | number) {
-    if (typeof name === 'string') {
-        console.log('Hi! my name is', name);
-        return true
-    }
-    console.log('logged person with id', name)
-    return 'looked up a thing'
+  if (typeof name === 'string') {
+    console.log('Hi! my name is', name);
+    return true;
+  }
+  console.log('logged person with id', name);
+  return 'looked up a thing';
 }
 
-
-const result = log('Tuneer')
+const result = log('Tuneer');
